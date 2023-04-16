@@ -1,4 +1,3 @@
-# app/api/tutor.py
 from fastapi import APIRouter
 from app.schemas import tutor as tutor_schema
 from app.models import tutor as tutor_model

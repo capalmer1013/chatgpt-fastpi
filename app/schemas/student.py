@@ -1,11 +1,10 @@
-# app/schemas/student.py
 from pydantic import BaseModel
+from typing import List
+from .tutor import TutorGet
 class StudentBase(BaseModel):
     name: str
-    grade: int
 class StudentCreate(StudentBase):
     pass
-class Student(StudentBase):
+class StudentGet(StudentBase):
     id: int
-    class Config:
-        orm_mode = True
+    tutors: List[TutorGet] = []
